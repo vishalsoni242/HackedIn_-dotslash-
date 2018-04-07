@@ -17,7 +17,7 @@
          session_start();
          $_SESSION['login_user']= $email;
          echo $_SESSION['login_user'];
-         //header("location: newhere.html");
+         header("location: \login\dashboard\profile.html");
       }else {
          $error = "Your Login Name or Password is invalid";
          echo "<script type=\"text/javascript\"> alert(\"Invalid email or password\") </script>";
