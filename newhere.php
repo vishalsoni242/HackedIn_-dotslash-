@@ -15,8 +15,14 @@
     //$email = mysqli_real_escape_string($link,$_POST['email']);
     $sql = "INSERT INTO patients Values ('$email','$password','$name','$dob','$contact','$gender','$bg')";
     if(mysqli_query($link,$sql)) {
-      echo "success";
-      header("location: index.php");
+      //echo "success";
+      $msg = "Registration Done";
+      //echo "<script type='text/javascript'> alert('$msg'); location: index.php </script>";
+      //header("location: index.php");
+      echo "<script type=\"text/javascript\">
+      alert(\"Registration Done\");
+      location=\"index.php\";
+      </script>";
     } else {
       echo "fail";
     }
